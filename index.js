@@ -7,15 +7,19 @@ app.get("/",(req,res)=>{
     res.send("hello world");
 });
 
-//익스프레스에 중요한거 1.라우터2.못들음
 
 
-app.get("/hi",(req,res)=>{
-    res.send("hi world");
-});
 
- app.post("/",(req,res)=>{
-    res.send("hello ");
+app.get("/add",(req,res)=>{
+    var p1 =req.param('p1');
+    var p2 =req.param('p1');
+    var result =Number(p1)+Number(p2);
+
+
+ 
+    res.send("Result: "+ result);
  });
+
+
 
 app.listen(3000);
